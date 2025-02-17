@@ -21,8 +21,8 @@ limitations under the License.
 // +k8s:deepcopy-gen=package,register
 // +k8s:conversion-gen=bitbucket.org/courier/pkg/apis/aiops
 // +k8s:defaulter-gen=TypeMeta
-// +groupName=ait.alauda.io
-package v1beta1
+// +groupName=aiops.alauda.io
+package v1beta2
 
 import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
@@ -30,20 +30,8 @@ import (
 )
 
 var (
-	Group        = "ait.alauda.io"
-	Version      = "v1beta1"
-	GroupVersion = Group + "/" + Version
-
-	NMGVR = schema.GroupVersionResource{
-		Group:    "aitextensions.alauda.io",
-		Version:  Version,
-		Resource: "notificationmessages",
-	}
-)
-
-var (
 	// SchemeGroupVersion is group version used to register these objects
-	SchemeGroupVersion = schema.GroupVersion{Group: "ait.alauda.io", Version: "v1beta1"}
+	SchemeGroupVersion = schema.GroupVersion{Group: "aiops.alauda.io", Version: "v1beta2"}
 
 	// SchemeBuilder is used to add go types to the GroupVersionKind scheme
 	SchemeBuilder = &scheme.Builder{GroupVersion: SchemeGroupVersion}

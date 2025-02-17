@@ -31,6 +31,10 @@ const (
 	MessageTypeText     = "text"
 	MessageTypeMarkdown = "markdown"
 
+	// Language
+	LanguageEN = "en"
+	LanguageZH = "zh"
+
 	// Rule label keys
 	RuleLabelKeyAlertResource        = "alert_resource"
 	RuleLabelKeyAlertMessage         = "alert_message"
@@ -74,6 +78,7 @@ var (
 	LabelKeyTemplateEmailBodyType    = "%s/template.email.body.type"
 	LabelKeyTemplateEmailBodyTypeOld = "%s/message-type"
 	LabelKeyTemplateWebhookBodyType  = "%s/template.webhook.body.type"
+	LabelKeyTemplateLanguage         = "%s/template.language"
 	LabelKeyType                     = "%s/type"
 )
 
@@ -98,5 +103,6 @@ func InitWithDomain(domain string) {
 	LabelKeyTemplateEmailBodyType = fmt.Sprintf(LabelKeyTemplateEmailBodyType, domain)
 	LabelKeyTemplateEmailBodyTypeOld = fmt.Sprintf(LabelKeyTemplateEmailBodyTypeOld, domain)
 	LabelKeyTemplateWebhookBodyType = fmt.Sprintf(LabelKeyTemplateWebhookBodyType, domain)
+	LabelKeyTemplateLanguage = fmt.Sprintf(LabelKeyTemplateLanguage, domain)
 	LabelKeyType = fmt.Sprintf(LabelKeyType, domain)
 }
